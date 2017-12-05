@@ -44,5 +44,13 @@ import net.jcip.annotations.*;
 
         return Collections.unmodifiableMap(result);
     }
+    //add by wubo
+    public static void main(String[] args) {
+        Map<String,MutablePoint> pointInit = new HashMap<>();
+        MonitorVehicleTracker monitorVehicleTracker = new MonitorVehicleTracker(pointInit);
+        monitorVehicleTracker.setLocation("wubo",1,2);
+        MutablePoint mutablePoint =  monitorVehicleTracker.getLocation("wubo");
+        System.out.println("mutablePoint.x is {"+mutablePoint.getX()+"},mutablePoint y is {"+mutablePoint.getY()+"}");
+    }
 }
 

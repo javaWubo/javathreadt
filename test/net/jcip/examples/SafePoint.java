@@ -6,6 +6,8 @@ import net.jcip.annotations.*;
  * SafePoint
  *
  * @author Brian Goetz and Tim Peierls
+ * add by wubo
+ * 如果在 publicVehicleTracker 中对 返回的位置做了判断则会发生线程安全问题
  */
 @ThreadSafe
 public class SafePoint {

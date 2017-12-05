@@ -37,7 +37,6 @@ public class DelegatingVehicleTracker {
             throw new IllegalArgumentException("invalid vehicle name: " + id);
     }
 
-    // Alternate version of getLocations (Listing 4.8)
     public Map<String, Point> getLocationsAsStatic() {
         return Collections.unmodifiableMap(
                 new HashMap<String, Point>(locations));

@@ -30,5 +30,23 @@ public class ThisEscape {
 
     interface Event {
     }
+
+    public static void main(String[] args) {
+        EventSource eventSource = new EventSource() {
+            @Override
+            public void registerListener(EventListener e) {
+
+            }
+
+        };
+        ThisEscape te = new ThisEscape(eventSource);
+        Event event = new Event() {
+            @Override
+            public int hashCode() {
+                return super.hashCode();
+            }
+        };
+        te.doSomething(event);
+    }
 }
 

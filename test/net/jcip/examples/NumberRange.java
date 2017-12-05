@@ -8,6 +8,10 @@ import java.util.concurrent.atomic.*;
  * Number range class that does not sufficiently protect its invariants
  *
  * @author Brian Goetz and Tim Peierls
+ * add by wubo
+ * 如何将下面的类改成 线程安全的：
+ * 1 添加同步锁
+ * 2 够了
  */
 
 public class NumberRange {
@@ -30,6 +34,7 @@ public class NumberRange {
     }
 
     public boolean isInRange(int i) {
+        // add by wubo 线程不安全的数据进行了比较数值
         return (i >= lower.get() && i <= upper.get());
     }
 }
